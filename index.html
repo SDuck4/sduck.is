@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="3; url=https://sduck.is/developer"></meta>
+  <title>Redirect</title>
+</head>
+<body>
+  Redirect to <a href="https://sduck.is/developer">https://sduck.is/developer</a>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9X7BD7P45"></script>
+  <script>
+    const redirect_to = 'https://sduck.is/developer';
+    function redirectWithEvent(to) {
+      gtag('event', 'redirect', {
+        'from': window.location.href,
+        'to': to
+      });
+      window.location.href = to;
+    }
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-L9X7BD7P45');
+    redirectWithEvent(redirect_to);
+  </script>
+</body>
+</html>
